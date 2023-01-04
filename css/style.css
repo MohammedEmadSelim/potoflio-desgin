@@ -34,12 +34,17 @@ body {
   text-decoration: none;
   padding: 0px 12px;
 }
+.navbarDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .main-ul {
   display: flex;
   position: relative;
-  padding-left: 210px;
+/*   padding-left: 210px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 10px; */
   /* padding: 10px 290px 0; */
 }
 .navbarDiv{
@@ -430,7 +435,7 @@ footer .gammal {
     font-size: 40px;
   }
   .main-ul{
-    padding: 10px 0px
+/*     padding: 10px 0px */
   }
   .navBar {
     display: flex;
@@ -646,9 +651,9 @@ footer .gammal {
     padding: 10px 0px;
     /* background-color: var(--backG); */
     /* box-shadow: 2px 2px 4px 3px gray; */
-    border-radius: 10px;
+/*     border-radius: 10px;
     margin-left: 20px;
-    height: 40px;
+    height: 40px; */
   }
   .navbarDiv{
     display: flex;
@@ -858,9 +863,9 @@ footer .gammal {
   .main-ul {
     display: flex;
     position: relative;
-    padding-left: 20px;
+/*     padding-left: 20px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px; */
     /* padding: 10px 290px 0; */
   }
   .navbarDiv{
@@ -1040,9 +1045,9 @@ footer .gammal {
   .main-ul {
     display: flex;
     position: relative;
-    padding-left: 100px;
+/*     padding-left: 100px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 10px; */
     /* padding: 10px 290px 0; */
   }
   .navbarDiv{
