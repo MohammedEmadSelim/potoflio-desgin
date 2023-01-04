@@ -588,7 +588,7 @@ footer .gammal {
     align-items: center;
   }
   .projectsSection .cards .card {
-    width: 55%;
+    width: 275px;
     margin: 10px 0;
   }
   .card img {
@@ -627,6 +627,9 @@ footer .gammal {
   }
   .contactSection .in{
     width: 350px;
+  }
+  footer{
+    
   }
 }
 
