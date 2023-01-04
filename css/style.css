@@ -459,6 +459,7 @@ footer .gammal {
   }
   .main-ul li:hover .sub-ul {
     display: inline-block;
+    width: 400px;
   }
 
   .sub-ul {
@@ -481,7 +482,7 @@ footer .gammal {
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 161px;
+    left: 110px;
     top: 15px;
     height: 100px;
     padding: 10px;
@@ -495,7 +496,7 @@ footer .gammal {
     justify-content: center;
     position: absolute;
     background-color: var(--backG);
-    left: 161px;
+    left: 110px;
     top: 50px;
     height: 100px;
     padding: 10px;
@@ -508,7 +509,7 @@ footer .gammal {
     justify-content: center;
     position: absolute;
     background-color: var(--backG);
-    left: 161px;
+    left: 110px;
     top: 70px;
     height: 100px;
     padding: 10px;
