@@ -434,6 +434,9 @@ footer .gammal {
     margin: 0;
     font-size: 40px;
   }
+  .navbarDiv{
+    display: inline;
+  }
   .main-ul{
 /*     padding: 10px 0px */
   }
@@ -451,8 +454,8 @@ footer .gammal {
 
   .main-ul img {
     display: inline;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   .main-ul li:hover .sub-ul {
     display: inline-block;
@@ -537,7 +540,7 @@ footer .gammal {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 60px;
+    padding: 30px 40px;
   }
   .heroSection .heroInfo {
     margin-right: 0px !important;
@@ -551,7 +554,7 @@ footer .gammal {
   }
   .heroSection img {
     height: 300px;
-    width: 600px;
+    width: 400px;
   }
   .title {
     font-size: 25px;
@@ -576,7 +579,7 @@ footer .gammal {
   }
   .sevicesSection .cards .card {
     padding: 10px 10px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 20px;
   }
   .projectsSection .cards {
@@ -584,7 +587,7 @@ footer .gammal {
     align-items: center;
   }
   .projectsSection .cards .card {
-    width: 45%;
+    width: 55%;
     margin: 10px 0;
   }
   .card img {
