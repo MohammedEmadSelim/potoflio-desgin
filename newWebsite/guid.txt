@@ -1,0 +1,13 @@
+header
+hero section 
+about section(text-image)
+services section(cards)
+projects section (cards)
+video tutorial section(cards)
+tech stack section(image)
+contact ua section (image-form)
+================================
+services card :hover border
+projects card button:hover border
+tutorials card hover cursor pointer
+contact button hover cursor pointer

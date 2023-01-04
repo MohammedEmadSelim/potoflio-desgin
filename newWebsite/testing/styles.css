@@ -1,0 +1,56 @@
+body{
+    background-color: antiquewhite;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+section img{
+    width: 30px;
+    height: 30px;
+}
+.mam{
+    display: inline;
+}
+.mam .li-mam{
+    display: inline-block;
+}
+.mam .li-mam ul {
+    display: none;
+    position: absolute;
+}
+.mam .li-mam:hover ul{
+    display: grid;
+    
+}
+.mam .li-mam ul li ul{
+    display: inline;
+}
+.mam .li-mam ul li ul li {
+    display: inline-block;
+    
+ } 
+ .mam .li-mam ul li ul li ul{
+    /* هو ده about */
+    display: none;
+    position: absolute;
+    background-color: rgb(23, 74, 74);
+}
+.mam .li-mam ul li ul li:hover ul {
+    display: inline;
+    color: blue;
+    
+}
+.i{
+    border: solid black;
+    border-width: 2 3px 3px 10px;
+    /* display: inline-block; */
+    padding: 3px;
+}
+
+.p{
+    transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
