@@ -37,7 +37,7 @@ body {
 .main-ul {
   display: flex;
   position: relative;
-  padding-left: 200px;
+  padding-left: 210px;
   padding-top: 10px;
   padding-bottom: 10px;
   /* padding: 10px 290px 0; */
@@ -838,7 +838,7 @@ footer .gammal {
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 769px)  {
+@media only screen and (min-width: 769px) and (max-width: 991px )  {
   .marckScript {
     font-family: "Marck Script", cursive;
     color: var(--teal);
