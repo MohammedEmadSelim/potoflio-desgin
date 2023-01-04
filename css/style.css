@@ -1021,7 +1021,7 @@ footer .gammal {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1200px ){
   .marckScript {
     font-family: "Marck Script", cursive;
     color: var(--teal);
