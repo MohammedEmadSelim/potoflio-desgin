@@ -155,7 +155,7 @@ li {
 .main-ul .sub-ul .sub-sub-ul li:hover ul{
   display: block;
   position: absolute;
-  top: 40px;
+  top: 30px;
   background-color: var(--backG);
   border-radius: 10px;
   padding: 10px;
