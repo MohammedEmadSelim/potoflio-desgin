@@ -468,6 +468,7 @@ footer .gammal {
     padding: 8px 0;
     width: 600px;
     left: 50px;
+    top: 210px;
   }
 
   .sub-sub-ul li:hover ul {
@@ -629,7 +630,14 @@ footer .gammal {
     width: 350px;
   }
   footer{
-    
+    font-size:14px;
+  }
+  footer .Mohammed{
+    font-size:22px;
+    color:var(--teal);
+  }
+  footer .gammal{
+    font-size:18px;
   }
 }
 
