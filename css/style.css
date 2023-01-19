@@ -34,21 +34,18 @@ body {
   text-decoration: none;
   padding: 0px 12px;
 }
-.navbarDiv{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 .main-ul {
   display: flex;
   position: relative;
-/*   padding-left: 210px;
-  padding-top: 10px;
-  padding-bottom: 10px; */
+  align-items: center;
+  justify-content: center;
   /* padding: 10px 290px 0; */
 }
 .navbarDiv{
   width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .main-ul img {
   display: none;
@@ -58,7 +55,8 @@ body {
   width: 100%;
   /* overflow: hidden; */
   font-size: 20px;
-  
+  align-items: center;
+  justify-content: center;
 }
 
 
@@ -155,60 +153,13 @@ li {
 .main-ul .sub-ul .sub-sub-ul li:hover ul{
   display: block;
   position: absolute;
-  top: 30px;
+  top: 40px;
   background-color: var(--backG);
   border-radius: 10px;
   padding: 10px;
   box-shadow: 1px 1px 2px 3px gray;
 }
 
-/* belongs to media quairy */
-
-/* start of dropdown link */
-/* ul {
-  display: inline;
-}
-ul li {
-  display: inline-block;
-}
-ul li:hover {
-}
-ul li ul {
-  position: absolute;
-  width: 200px;
-  display: none;
-  border: 1px solid var(--teal);
-}
-ul li:hover ul {
-  display: block;
-}
-
-ul li ul:before {
-  content: "";
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid var(--teal);
-  height: 0;
-  width: 0;
-  position: absolute;
-  left: 20px;
-  top: -6px;
-}
-ul li ul li {
-  background: var(--backG);
-  display: block;
-  padding-left: 5px;
-}
-ul li ul li a {
-  display: block !important;
-  text-decoration: none;
-  color: var(--black) !important;
-  font-size: 15px;
-}
-ul li ul li:hover {
-  background: var(--teal);
-} */
-/* end of dropdown link */
 
 /* start of hero section */
 /* end of hero section */
@@ -231,7 +182,8 @@ section {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 130px 70px ;
+  padding: 120px 70px ;
+  padding-top: 110px;
 }
 .heroSection img {
   height: 300px;
@@ -240,7 +192,11 @@ section {
 .heroSection h2 {
   font-size: 85px;
 }
+.heroSection p {
+  font-size: 25px;
+}
 .heroSection p span {
+  font-size: 25px;
   color: var(--teal);
   font-weight: bold;
 }
@@ -250,7 +206,6 @@ section {
   font-size: 35px;
 }
 .heroInfo {
-  font-size: 25px;
   line-height: 1.6;
 }
 /* stat of About section */
@@ -280,10 +235,17 @@ section {
 /* end of About section */
 
 /* stat of sevices section */
+.sevicesSection{
+  height: 650px;
+}
 .cards {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 55px 0;
+}
+.sevicesSection .card{
+  margin-top: 65px;
 }
 
 .card {
@@ -415,6 +377,42 @@ footer .mohammed {
 footer .gammal {
   color: var(--teal);
 }
+.modal-container{
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal{
+  background-color: var(--projectSectionBackgroundColor);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#close{
+  background-color: var(--btn-color);
+  height: 35px;
+  width: 65px;
+  border: 0;
+  border-radius: 5px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+.show{
+  visibility: visible;
+  opacity: 1;
+}
 /* end of footer */
 
 /* start media query  */
@@ -434,11 +432,16 @@ footer .gammal {
     margin: 0;
     font-size: 40px;
   }
-  .navbarDiv{
-    display: inline;
-  }
   .main-ul{
-/*     padding: 10px 0px */
+    padding: 10px 0px
+  }
+  .sub-ul {
+    display: none;
+    position: absolute;
+    padding: 8px 0;
+    width: 334px;
+    top: 50px;
+    left: 10px;
   }
   .navBar {
     display: flex;
@@ -447,28 +450,18 @@ footer .gammal {
     padding-left: 3px;
     margin-bottom: 30px;
     background-color: var(--backG);
-    width: 30%;
+    width: 39%;
     box-shadow: 2px 2px 4px 3px gray;
     border-radius: 10px;
   }
 
   .main-ul img {
     display: inline;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
   .main-ul li:hover .sub-ul {
     display: inline-block;
-    width: 400px;
-  }
-
-  .sub-ul {
-    display: none;
-    position: absolute;
-    padding: 8px 0;
-    width: 600px;
-    left: 50px;
-    top: 210px;
   }
 
   .sub-sub-ul li:hover ul {
@@ -483,12 +476,13 @@ footer .gammal {
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 110px;
-    top: 15px;
+    left: 121px;
+    top: 15px !important;
     height: 100px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px 3px gray;
+    text-align: center;
   }
 
   .sub-sub-sub-ul-1 {
@@ -497,12 +491,13 @@ footer .gammal {
     justify-content: center;
     position: absolute;
     background-color: var(--backG);
-    left: 110px;
-    top: 50px;
+    left: 121px;
+    top: 50px !important;
     height: 100px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px 3px gray;
+    text-align: center;
   }
   .sub-sub-sub-ul-2 {
     flex-direction: column;
@@ -510,12 +505,13 @@ footer .gammal {
     justify-content: center;
     position: absolute;
     background-color: var(--backG);
-    left: 110px;
-    top: 70px;
+    left: 121px;
+    top: 70px !important;
     height: 100px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 4px 3px gray;
+    text-align: center;
   }
   .sub-sub-ul li .sub-sub-sub-ul:before{
     display: none;
@@ -527,13 +523,13 @@ footer .gammal {
     display: none;
   }
   .sub-sub-ul a {
-    color: var(--black);
+    
   }
   .main-ul .sub-sub-ul ul a {
     width: 100%;
   }
   .main-ul .sub-sub-ul ul li:hover {
-    background-color: var(--teal);
+    color: teal;
     width: 100%;
     text-align: center;
     /* padding: 0 5px; */
@@ -542,21 +538,27 @@ footer .gammal {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 40px;
+    padding: 50px 60px;
   }
   .heroSection .heroInfo {
     margin-right: 0px !important;
     /* padding-left: 10px; */
   }
   .heroSection .heroInfo h2 {
-    font-size: 65px;
+    font-size: 45px;
   }
   .heroSection .heroInfo p {
-    font-size: 20;
+    font-size: 16px;
+  }
+  .heroSection .heroInfo strong{
+    font-size: 30px;
+  }
+  .heroSection .heroInfo span{
+    font-size: 20px;
   }
   .heroSection img {
-    height: 300px;
-    width: 400px;
+    height: 250px;
+    width: 320px;
   }
   .title {
     font-size: 25px;
@@ -566,12 +568,12 @@ footer .gammal {
   }
   .aboutSection .aboutInfo p {
     width: 99%;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 40px;
     margin-top: 10px;
   }
   .aboutSection .aboutInfo img {
-    width: 400px;
+    width: 340px;
     height: 300px;
   }
   .sevicesSection .cards {
@@ -581,20 +583,36 @@ footer .gammal {
   }
   .sevicesSection .cards .card {
     padding: 10px 10px;
-    width: 300px;
+    width: 320px;
     margin-bottom: 20px;
+  }
+  .sevicesSection .cards .card h3{
+    font-size: 16px;
+    
+
+  }
+  .sevicesSection .cards .card p{
+    font-size: 14px;
+    
   }
   .projectsSection .cards {
     flex-direction: column;
     align-items: center;
   }
   .projectsSection .cards .card {
-    width: 275px;
+    width: 65%;
     margin: 10px 0;
+  }
+  .projectsSection .cards .card h3{
+    margin-bottom: 5px;
+  }
+  .projectsSection .cards .card p{
+    font-size: 13px;
   }
   .card img {
     height: 150px;
     width: 100%;
+    margin: 0;
   }
   .tutorialSection .cards {
     flex-direction: column;
@@ -603,7 +621,10 @@ footer .gammal {
   }
   .tutorialSection .cards .card {
     width: 275px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+  }
+  .tutorialSection .cards .card h3{
+    font-size: 16px;
   }
   .techSection .cards {
     flex-direction: column;
@@ -629,15 +650,25 @@ footer .gammal {
   .contactSection .in{
     width: 350px;
   }
-  footer{
-    font-size:14px;
+  footer .footerInfo{
+    padding: 0 20px;
   }
-  footer .Mohammed{
-    font-size:22px;
-    color:var(--teal);
+  footer h4{
+    font-size: 8px;
+  }
+  footer .mohammed{
+    font-size: 20px;
+    color: var(--teal);
   }
   footer .gammal{
-    font-size:18px;
+    font-size: 14px;
+  }
+  footer .picDiv{
+    display: flex;
+    padding: 0;
+  }
+  footer .picDiv img{
+    margin: 3px;
   }
 }
 
@@ -666,9 +697,9 @@ footer .gammal {
     padding: 10px 0px;
     /* background-color: var(--backG); */
     /* box-shadow: 2px 2px 4px 3px gray; */
-/*     border-radius: 10px;
+    border-radius: 10px;
     margin-left: 20px;
-    height: 40px; */
+    height: 40px;
   }
   .navbarDiv{
     display: flex;
@@ -678,10 +709,13 @@ footer .gammal {
   .navBar {
     display: flex;
     font-size: 15px;
-    margin-left: 30px;
-    margin-bottom: 30px;
+    /* margin-left: 30px;
+    margin-bottom: 30px; */
     width: 100%;
     
+  }
+  .navBar p{
+    font-size: 15px;
   }
 
   .main-ul img {
@@ -764,26 +798,32 @@ footer .gammal {
     /* padding-left: 10px; */
   }
   .heroSection .heroInfo h2 {
-    font-size: 65px;
+    font-size: 55px;
   }
   .heroSection .heroInfo p {
-    font-size: 20;
+    font-size: 19px ;
   }
   .heroSection img {
     height: 300px;
     width: 600px;
   }
   .title {
-    font-size: 25px;
+    font-size: 23px;
   }
   .aboutSection .aboutInfo {
     flex-direction: column;
   }
   .aboutSection .aboutInfo p {
     width: 99%;
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 40px;
     margin-top: 10px;
+  }
+  h3{
+    font-size:16px ;
+  }
+  p{
+    font-size: 14px;
   }
   .aboutSection .aboutInfo img {
     width: 400px;
@@ -853,18 +893,28 @@ footer .gammal {
     height: 200px;
     
   }
+  footer h4{
+    font-size: px;
+  }
+  footer .mohammed{
+    font-size: 25px;
+    color: var(--teal);
+  }
+  footer .gammal{
+    font-size: 16px;
+  }
 }
  
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 769px) and (max-width: 991px )  {
+@media only screen and (min-width: 769px) and (max-width:991px) {
   .marckScript {
     font-family: "Marck Script", cursive;
     color: var(--teal);
     font-weight: 700;
     text-decoration: none;
-    font-size: 50px;
+    font-size: 40px;
     /* margin-right: 30%; */
     /* margin-left: 10px; */
     text-align: center;
@@ -875,16 +925,20 @@ footer .gammal {
     text-decoration: none;
     padding: 0px 12px;
   }
+  .drop-container{
+    margin: 0 ;
+  }
   .main-ul {
     display: flex;
     position: relative;
-/*     padding-left: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px; */
+    align-items: center;
+    justify-content: center;
     /* padding: 10px 290px 0; */
   }
   .navbarDiv{
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .main-ul img {
     display: none;
@@ -893,9 +947,11 @@ footer .gammal {
     display: flex;
     width: 100%;
     /* overflow: hidden; */
-    font-size: 20px;
-    margin-left: 70px;
+    font-size: 19px;
+    align-items: center;
+    justify-content: center;
   }
+  
   
   
    a:hover {
@@ -1010,18 +1066,50 @@ footer .gammal {
     justify-items: center;
     width: 100%;
   }
-  .drop-container{
-    margin-top: 25px;
-  }
+ 
   .heroSection{
-    padding: 85px 30px;
+    padding: 30px 30px;
+  }
+  .heroSection .heroInfo h2{
+    font-size: 55px;
+  }
+  .heroSection .heroInfo p{
+    font-size:18px ;
+  }
+  .heroSection p strong{
+    font-size: 30px;
+  }
+  .heroSection p span{
+    font-size: 20px;
   }
   .heroSection img{
     width: 460px;
     height: 300px;
   }
+  .aboutSection .aboutInfo p{
+    font-size: 16px;
+  }
+  .aboutSection .aboutInfo img{
+    height: 500px;
+    width: 350px;
+  }
+  .sevicesSection h3{
+    font-size: 16px;
+  }
+  .sevicesSection p{
+    font-size: 13px;
+  }
   .projectsSection .card{
     width: 30%;
+  }
+  .projectsSection .card h3{
+    font-size: 16px;
+  }
+  .projectsSection .card p{
+    font-size: 13px;
+  }
+  .tutorialSection .card h3{
+    font-size: 16px;
   }
   .techSection img{
     width: 200px;
@@ -1038,10 +1126,11 @@ footer .gammal {
     width: 300px;
 
   }
+  
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) and (max-width: 1200px ){
+@media only screen and (min-width: 992px) and (max-width:1200px) {
   .marckScript {
     font-family: "Marck Script", cursive;
     color: var(--teal);
@@ -1060,13 +1149,14 @@ footer .gammal {
   .main-ul {
     display: flex;
     position: relative;
-/*     padding-left: 100px;
-    padding-top: 10px;
-    padding-bottom: 10px; */
+    align-items: center;
+    justify-content: center;
     /* padding: 10px 290px 0; */
   }
   .navbarDiv{
     width: 100%;
+    align-items: center;
+    justify-content: center;
   }
   .main-ul img {
     display: none;
@@ -1076,6 +1166,8 @@ footer .gammal {
     width: 100%;
     /* overflow: hidden; */
     font-size: 20px;
+    align-items: center;
+    justify-content: center;
     
   }
   
@@ -1150,5 +1242,6 @@ footer .gammal {
     top: -6px;
   }
 
+  
 }
 /* end media query  */
